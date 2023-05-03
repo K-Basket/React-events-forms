@@ -44,17 +44,18 @@ export class Counter extends React.Component {
     // });
 
     // 2. Варииант: setState(() => {}) берет значение из переменной и модифицирует его внутри функции
-    this.setState(valState => {
+    // Каждый раз при вызове setState() в параметр prevState будет передана ссылка на актуальное состояние (например value) в момент обновления
+    this.setState(prevState => {
       return {
-        value: valState.value + 1,
+        value: prevState.value + 1,
       };
     });
   };
 
   handleDecrement = () => {
-    this.setState(valState => {
+    this.setState(prevState => {
       return {
-        value: valState.value - 1,
+        value: prevState.value - 1,
       };
     });
   };
