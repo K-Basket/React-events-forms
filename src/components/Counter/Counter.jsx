@@ -66,6 +66,11 @@ export class Counter extends React.Component {
       <div className={css.Counter}>
         <span className={css.Counter__value}>{this.state.value}</span>
 
+        <Controls
+          onDecrement={this.handleDecrement}
+          onIncrement={this.handleIncrement}
+        />
+
         {/* <div className={css.Counter__controls}>
           <button type="button" onClick={this.handleIncrement}>
             Увеличить на 1
