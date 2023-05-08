@@ -5,7 +5,7 @@ import { Controls } from './Controls';
 
 // класс Counter должен наследовать базовый компонент React.Component
 export class Counter extends React.Component {
-  // передаем дефолтные значения для пропа initialValue
+  // static используется для передачи дефолтных значений для пропа "initialValue"
   static defaultProps = {
     initialValue: 0,
   };
@@ -28,7 +28,7 @@ export class Counter extends React.Component {
     // задаем стартовое значение
     // value: 39,
 
-    // стартотвое значение пропа, переданного из пропа в App
+    // props: стартотвое значение пропа, переданного из пропа в App
     value: this.props.initialValue,
   };
 

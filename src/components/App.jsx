@@ -4,6 +4,7 @@ import { Dropdown } from './Dropdown/Dropdown';
 // импорт использован с реэкспортом (создан дополнительно файл index.js, в котором стоит экспорт)
 import { ColorPicker } from './ColorPicker';
 import { TodoList } from './TodoList';
+import { Form } from './Form';
 import colorPicker from './data/colorPicker.json';
 import initialTodos from './data/todos.json';
 
@@ -20,6 +21,11 @@ export class App extends Component {
     }));
   };
 
+  // Метод для получения данных из Form в App
+  formSubmitHandler = data => {
+    console.log('data', data);
+  };
+
   render() {
     // деструктуриизация пропа для TodoList
     const { todos } = this.state;
@@ -27,10 +33,15 @@ export class App extends Component {
       (acc, todo) => (todo.completed ? acc + 1 : acc),
       0
     );
-    console.log(completedTodoCount);
+    // console.log(completedTodoCount);
 
     return (
       <div>
+        <h1>02 Формы</h1>
+        <section>
+          <Form onSabmitData={this.formSubmitHandler} />
+        </section>
+
         <h1>01 Событие и сосотяние</h1>
 
         <section>
