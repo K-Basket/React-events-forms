@@ -38,7 +38,7 @@ export class Form extends Component {
   handleSubmit = evt => {
     evt.preventDefault();
 
-    this.props.onSabmitData(this.state);
+    this.props.onSubmitData(this.state);
 
     this.reset();
   };

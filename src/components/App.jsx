@@ -39,7 +39,7 @@ export class App extends Component {
       <div>
         <h1>02 Формы</h1>
         <section>
-          <Form onSabmitData={this.formSubmitHandler} />
+          <Form onSubmitData={this.formSubmitHandler} />
         </section>
 
         <h1>01 Событие и сосотяние</h1>
